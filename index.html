@@ -409,6 +409,99 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/06/13/Vueshengming/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="刘继开">
+      <meta itemprop="description" content="描述">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="js菜鸟成长记">
+    </span>
+      <header class="post-header">
+
+        
+          <h1 class="post-title" itemprop="name headline">
+              
+              <a href="/2017/06/13/Vueshengming/" class="post-title-link" itemprop="url">Vueshengming</a>
+            
+          </h1>
+        
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2017-06-13 20:27:20" itemprop="dateCreated datePublished" datetime="2017-06-13T20:27:20+08:00">2017-06-13</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2019-08-13 21:11:41" itemprop="dateModified" datetime="2019-08-13T21:11:41+08:00">2019-08-13</time>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          
+            <h2 id="Vue生命周期"><a href="#Vue生命周期" class="headerlink" title="Vue生命周期"></a>Vue生命周期</h2><p>vue 生命周期总共11个钩子函数，常用的有8个</p>
+<p>所有的生命周期自动绑定this上下文到实例中，因此可以访问数据，对属性和方法进行运算。不能用箭头函数来定义一个生命周期，这里和剪头函数this指向有关；</p>
+<h3 id="beforeCreate和created"><a href="#beforeCreate和created" class="headerlink" title="beforeCreate和created"></a>beforeCreate和created</h3><p>先说beforeCreate和created：因为实例写上以后已经开始创建；这两个函数写上以后会自动触发；beforeCreate是创建之前，数据和事件都没有准备好，所以函数里拿不到数据；一般做页面加载时的loading图展示。 created是创建完成，数据和事件已经准备好，在created里可以直接拿到数据；</p>
+<h3 id="beforeMount-和-mounted"><a href="#beforeMount-和-mounted" class="headerlink" title="beforeMount 和 mounted"></a>beforeMount 和 mounted</h3><p>beforeMount和mounted：挂载是把创建的对象作用于DOM节点上；里面的数据能够解析；执行顺序是先beforeMount后mounted；在创建（created）的后边执行的。因为需要先创建，才能在整个实例化中进行挂载；他与created 的区别是创建对象只是创建了，没有吧整个对象作用于DOM对象上；在beforeMount里拿不到this.$el对象；而在created中能拿到this.$el；因为已经进到挂载阶段了；<br>beforeMount挂载（加载）之前，实例只是放上去，但是变量语法没有被解析；<br>mounted：挂载（加载）之后，变量语法会被解析完成；应用：打开页面需要展示接口的数据，要发ajax或者axios请求，又没有事件，只能在mounted中写请求完数据之后把数据给data，再进行最新数据的展示；因此在nounted进行数据的请求；同时当数据过来时，可以把loading图关掉；</p>
+<h3 id="beforeUpdata-和-updata"><a href="#beforeUpdata-和-updata" class="headerlink" title="beforeUpdata 和 updata"></a>beforeUpdata 和 updata</h3><p>beforeUpdate和update：数据更新；不能像上边两个函数一样自动触发；只有整个对象得有变更时才能触发。这两个函数里的数据都是最新的；更新前数据变动了，但是视图并没有得到渲染，得到的还是更新前的数据。跟新完以后视图已经做了渲染更新。相当于视图DOM节点的操作；</p>
+<h3 id="beforeDestroy和destroyed"><a href="#beforeDestroy和destroyed" class="headerlink" title="beforeDestroy和destroyed"></a>beforeDestroy和destroyed</h3><p>beforeDestroy和destroyed:销毁；和更新一样不能自己触发；数据和事件和当前实例进行了解绑。后边的所有操作都不再管用了，但是初次渲染的数据还是能在页面中加载</p>
+
+          
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+      
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/04/09/hello-world/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -539,7 +632,7 @@
         
           <a href="/archives/">
         
-          <span class="site-state-item-count">3</span>
+          <span class="site-state-item-count">4</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
